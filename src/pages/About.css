@@ -1,0 +1,112 @@
+/* src/components/About.css */
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 50vh; /* Medium-sized banner */
+    width: 100%;
+    background-image: url('../../public/assets/Organic-Body-Lotion.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* About Content Section */
+.about-content-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #444;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #5d1929;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Button Styling (reused) */
+.shop-now-btn {
+    background-color: #ffd700;
+    color: #5d1929;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #e0b400;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 40vh;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .about-content-section {
+        padding: 2rem 1rem;
+    }
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+}

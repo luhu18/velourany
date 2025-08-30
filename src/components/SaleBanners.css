@@ -1,0 +1,93 @@
+.sale-banners-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sale-banner-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px; /* Ensures banners don't get too large on big screens */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  background-color: #fff;
+}
+
+.sale-banner-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sale-banner-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sale-banner-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.sale-banner-text {
+  padding: 1.5rem 1rem;
+  color: #333; /* Dark text for contrast against a light background */
+}
+
+.discount-label {
+  background-color: #5d1929;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sale-banner-text h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.shop-now-btn {
+  background-color: #ffd700;
+  color: #5d1929;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #e0b400;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sale-banners-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .sale-banner-item {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .sale-banner-text h3 {
+    font-size: 1.2rem;
+  }
+}

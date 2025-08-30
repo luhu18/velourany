@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.hero-section {
+  position: relative;
+  height: 100vh; 
+  width: 100%;
+  background-image: url('../../public/assets/moisture.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  color: #fff; 
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; 
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.hero-headline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.hero-subheadline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-cta-btn {
+  background-color: #5d1929; 
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-cta-btn:hover {
+  background-color: #4a1321;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2rem;
+  }
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+}

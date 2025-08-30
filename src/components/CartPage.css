@@ -1,0 +1,143 @@
+.cart-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cart-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.cart-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cart-items {
+  flex: 3;
+  min-width: 300px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.item-info p {
+  margin: 0;
+  color: #5d1929;
+  font-weight: bold;
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-control button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.quantity-control span {
+  padding: 0 0.5rem;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-summary {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-summary h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  border-bottom: 2px solid #5d1929;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.checkout-btn {
+  background-color: #5d1929;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+}

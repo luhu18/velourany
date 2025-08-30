@@ -1,0 +1,42 @@
+/* src/components/ProductFilters.css */
+
+.product-filters {
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.product-filters h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.filter-options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.filter-options label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.filter-options label:hover {
+  color: #000;
+}
+
+.filter-options input[type="radio"] {
+  accent-color: #5d1929; /* Your brand color */
+}
