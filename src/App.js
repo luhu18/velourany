@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import ProductPage from './components/ProductPage';
 import SaleBanners from './components/SaleBanners';
 import Footer from './components/Footer';
+import { SearchProvider } from './SearchContext';
 import AboutPage from './pages/About.js';
 import Magazine from './components/Magazine';
 import ContactPage from './pages/Contact.js';
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <CartProvider>
+        <SearchProvider>
         <div className="app">
           <Header />
           <main>
@@ -42,6 +44,7 @@ function App() {
           </main>
            <Footer />
         </div>
+        </SearchProvider>
       </CartProvider>
     </Router>
    

@@ -1,23 +1,49 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaUser, FaHeart, FaShoppingCart,} from 'react-icons/fa';
-import { BsMoonStarsFill } from "react-icons/bs";
+import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa';
+import { BsMoonStarsFill } from 'react-icons/bs';
 import { CartContext } from '../CartContext';
+import { SearchContext } from '../SearchContext';
 import './Header.css';
 
 const Header = () => {
   const { getCartCount } = useContext(CartContext);
+  const { searchQuery, setSearchQuery } = useContext(SearchContext);
   const cartItemCount = getCartCount();
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  useEffect(() => {
+    const handleSearch = () => {
+      console.log('Searching for:', searchQuery);
+    };
+
+    const timeoutId = setTimeout(handleSearch, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchQuery]);
 
   return (
     <header className="header-container">
       <nav className="main-navbar">
-        <div className="logo"><Link to="/">Velourany<BsMoonStarsFill/></Link></div>
-        <div className="search-bar">
-            <input type="text" placeholder="Search..." />
+       
+        <div className="logo"><Link to="/">Velourany<BsMoonStarsFill /></Link></div>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
           </div>
-          <div className="user-icons container">
-          
+         
+        <div className="user-icons container">
+
+          <div className="search-bar">
+           
+          </div>
           <Link to="/profile"><FaUser /></Link>
           <Link to="/favorites"><FaHeart /></Link>
           <Link to="/cart" className="cart-wrapper">

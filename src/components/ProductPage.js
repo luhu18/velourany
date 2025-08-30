@@ -1,24 +1,35 @@
-// src/components/ProductPage.js
-import React, { useState } from 'react';
-import products from '../data.js'; // Your mock data
-import ProductCard from './ProductCard.js';
-import ProductFilters from './ProductFilters.js'; // Import the new component
-import './ProductGrid.css'; // We'll keep the grid styling here
+import React, { useState, useContext } from 'react';
+import products from '../data.js';
+import ProductCard from './ProductCard';
+import ProductFilters from './ProductFilters';
+import { SearchContext } from '../SearchContext';
+import './ProductGrid.css';
 
 const ProductPage = () => {
-  const [filter, setFilter] = useState('all');
+  const [priceFilter, setPriceFilter] = useState('all');
+  const { searchQuery } = useContext(SearchContext);
 
   const handlePriceChange = (value) => {
-    setFilter(value);
+    setPriceFilter(value);
   };
 
   const getFilteredProducts = () => {
-    if (filter === 'low') {
-      return products.filter(product => product.price <= 50);
-    } else if (filter === 'high') {
-      return products.filter(product => product.price > 50);
+    let filtered = products;
+
+    if (searchQuery) {
+      filtered = filtered.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
     }
-    return products;
+
+    if (priceFilter === 'low') {
+      filtered = filtered.filter(product => product.price <= 50);
+    } else if (priceFilter === 'high') {
+      filtered = filtered.filter(product => product.price > 50);
+    }
+    
+    return filtered;
   };
 
   const filteredProducts = getFilteredProducts();
