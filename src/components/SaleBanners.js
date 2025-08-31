@@ -11,7 +11,7 @@ const SaleBanners = () => {
             <img src="/assets/set.webp" alt="25% Discount Cosmetic Skin Perfectly" loading="lazy" />
             <div className="sale-banner-text">
               <span className="discount-label">25% Discount</span>
-              <h3>Cosmetic Skin Perfectly</h3>
+              <h2>Cosmetic Skin Perfectly</h2>
               <button className="shop-now-btn">Shop Now</button>
             </div>
           </div>
@@ -23,7 +23,7 @@ const SaleBanners = () => {
             <img src="/assets/sponge-2384059_1280 (1).webp" alt="30% Discount Hydrated Skin Perfectly" loading="lazy" />
             <div className="sale-banner-text">
               <span className="discount-label">30% Discount</span>
-              <h3>Hydrated Skin Perfectly</h3>
+              <h2>Hydrated Skin Perfectly</h2>
               <button className="shop-now-btn">Shop Now</button>
             </div>
           </div>

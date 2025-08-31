@@ -53,7 +53,7 @@
   letter-spacing: 1px;
 }
 
-.sale-banner-text h3 {
+.sale-banner-text h2 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
   color: #222;
@@ -87,7 +87,7 @@
     min-width: unset;
   }
 
-  .sale-banner-text h3 {
+  .sale-banner-text h2 {
     font-size: 1.2rem;
   }
 }
