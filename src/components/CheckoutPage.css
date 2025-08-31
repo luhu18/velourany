@@ -15,11 +15,12 @@
   flex-wrap: wrap-reverse;
   gap: 3rem;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .checkout-form {
   flex: 2;
-  min-width: 300px;
+   min-width: 300px; 
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
@@ -45,6 +46,7 @@
 }
 
 .form-group input {
+  display: flex;
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
@@ -116,6 +118,10 @@
 
 @media (max-width: 768px) {
   .checkout-container {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin: 0 auto;
   }
+  
 }
